@@ -1,3 +1,4 @@
+
 HIGH = 1
 LOW = 0
 MSBFIRST = 1
@@ -41,6 +42,39 @@ class Serial(object):
         self.serial_id = serialOpen(self.device,self.baud)
     def __del__(self):
         serialClose(self.serial_id)
+
+class pin(object):
+	PIN_ID = -1
+	PIN_MODE = OUTPUT
+	def __init__(self,pin_id,pin_mode = OUTPUT):
+		self.PIN_ID = pin_id
+		self.PIN_MODE = pin_mode
+		pinMode(self.PIN_ID, self.PIN_MODE)
+	def read(self):
+		return digitalRead(self.PIN_ID)
+	def write(self,value):
+		return digitalWrite(self.PIN_ID,value)
+	def pwmWrite(self,value):
+		return pwmWrite(self.PIN_ID,value)
+	def mode(self,pin_mode):
+		self.PIN_MODE = pin_mode
+		pinMode(self.PIN_ID,self.PIN_MODE)
+
+class shift(object):
+	DATA_PIN = 0
+	CLOCK_PIN = 0
+	LATCH_PIN = 0
+	def __init__(self,data_pin,clock_pin,latch_pin):
+		self.DATA_PIN = data_pin
+		self.CLOCK_PIN = clock_pin
+		self.LATCH_PIN = latch_pin
+		self.DATA_PIN.mode(OUTPUT)
+		self.CLOCK_PIN.mode(OUTPUT)
+		self.LATCH_PIN.mode(OUTPUT)
+	def write(self,value,byte_order = MSBFIRST):
+		digitalWrite(self.LATCH_PIN.PIN_ID,LOW)
+		shiftOut(self.DATA_PIN.PIN_ID,self.CLOCK_PIN.PIN_ID,byte_order,value)
+		digitalWrite(self.LATCH_PIN.PIN_ID,HIGH)
 
 class GPIO(object):
     HIGH = 1
