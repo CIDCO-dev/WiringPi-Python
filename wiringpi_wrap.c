@@ -3159,6 +3159,22 @@ SWIG_AsVal_unsigned_SS_long (PyObject *obj, unsigned long *val)
 
 
 SWIGINTERN int
+SWIG_AsVal_unsigned_SS_int (PyObject * obj, unsigned int *val)
+{
+  unsigned long v;
+  int res = SWIG_AsVal_unsigned_SS_long (obj, &v);
+  if (SWIG_IsOK(res)) {
+    if ((v > UINT_MAX)) {
+      return SWIG_OverflowError;
+    } else {
+      if (val) *val = (unsigned int)(v);
+    }
+  }  
+  return res;
+}
+
+
+SWIGINTERN int
 SWIG_AsVal_unsigned_SS_char (PyObject * obj, unsigned char *val)
 {
   unsigned long v;
@@ -3189,22 +3205,6 @@ SWIGINTERNINLINE PyObject *
 SWIG_From_unsigned_SS_char  (unsigned char value)
 {    
   return SWIG_From_unsigned_SS_long  (value);
-}
-
-
-SWIGINTERN int
-SWIG_AsVal_unsigned_SS_int (PyObject * obj, unsigned int *val)
-{
-  unsigned long v;
-  int res = SWIG_AsVal_unsigned_SS_long (obj, &v);
-  if (SWIG_IsOK(res)) {
-    if ((v > UINT_MAX)) {
-      return SWIG_OverflowError;
-    } else {
-      if (val) *val = (unsigned int)(v);
-    }
-  }  
-  return res;
 }
 
 
@@ -3471,6 +3471,69 @@ SWIGINTERN PyObject *_wrap_pwmWrite(PyObject *SWIGUNUSEDPARM(self), PyObject *ar
   } 
   arg2 = (int)(val2);
   pwmWrite(arg1,arg2);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pwmSetMode(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  int arg1 ;
+  int val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:pwmSetMode",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_int(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "pwmSetMode" "', argument " "1"" of type '" "int""'");
+  } 
+  arg1 = (int)(val1);
+  pwmSetMode(arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pwmSetRange(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  unsigned int arg1 ;
+  unsigned int val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:pwmSetRange",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_unsigned_SS_int(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "pwmSetRange" "', argument " "1"" of type '" "unsigned int""'");
+  } 
+  arg1 = (unsigned int)(val1);
+  pwmSetRange(arg1);
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_pwmSetClock(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  int arg1 ;
+  int val1 ;
+  int ecode1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:pwmSetClock",&obj0)) SWIG_fail;
+  ecode1 = SWIG_AsVal_int(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "pwmSetClock" "', argument " "1"" of type '" "int""'");
+  } 
+  arg1 = (int)(val1);
+  pwmSetClock(arg1);
   resultobj = SWIG_Py_Void();
   return resultobj;
 fail:
@@ -4143,6 +4206,37 @@ fail:
 }
 
 
+SWIGINTERN PyObject *_wrap_waitForInterrupt(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  int arg1 ;
+  int arg2 ;
+  int val1 ;
+  int ecode1 = 0 ;
+  int val2 ;
+  int ecode2 = 0 ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  int result;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:waitForInterrupt",&obj0,&obj1)) SWIG_fail;
+  ecode1 = SWIG_AsVal_int(obj0, &val1);
+  if (!SWIG_IsOK(ecode1)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode1), "in method '" "waitForInterrupt" "', argument " "1"" of type '" "int""'");
+  } 
+  arg1 = (int)(val1);
+  ecode2 = SWIG_AsVal_int(obj1, &val2);
+  if (!SWIG_IsOK(ecode2)) {
+    SWIG_exception_fail(SWIG_ArgError(ecode2), "in method '" "waitForInterrupt" "', argument " "2"" of type '" "int""'");
+  } 
+  arg2 = (int)(val2);
+  result = (int)waitForInterrupt(arg1,arg2);
+  resultobj = SWIG_From_int((int)(result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
 static PyMethodDef SwigMethods[] = {
 	 { (char *)"SWIG_PyInstanceMethod_New", (PyCFunction)SWIG_PyInstanceMethod_New, METH_O, NULL},
 	 { (char *)"wiringPiSetup", _wrap_wiringPiSetup, METH_VARARGS, NULL},
@@ -4152,6 +4246,9 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"pinMode", _wrap_pinMode, METH_VARARGS, NULL},
 	 { (char *)"digitalWrite", _wrap_digitalWrite, METH_VARARGS, NULL},
 	 { (char *)"pwmWrite", _wrap_pwmWrite, METH_VARARGS, NULL},
+	 { (char *)"pwmSetMode", _wrap_pwmSetMode, METH_VARARGS, NULL},
+	 { (char *)"pwmSetRange", _wrap_pwmSetRange, METH_VARARGS, NULL},
+	 { (char *)"pwmSetClock", _wrap_pwmSetClock, METH_VARARGS, NULL},
 	 { (char *)"digitalRead", _wrap_digitalRead, METH_VARARGS, NULL},
 	 { (char *)"shiftOut", _wrap_shiftOut, METH_VARARGS, NULL},
 	 { (char *)"shiftIn", _wrap_shiftIn, METH_VARARGS, NULL},
@@ -4175,6 +4272,7 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"readNesJoystick", _wrap_readNesJoystick, METH_VARARGS, NULL},
 	 { (char *)"softPwmCreate", _wrap_softPwmCreate, METH_VARARGS, NULL},
 	 { (char *)"softPwmWrite", _wrap_softPwmWrite, METH_VARARGS, NULL},
+	 { (char *)"waitForInterrupt", _wrap_waitForInterrupt, METH_VARARGS, NULL},
 	 { NULL, NULL, 0, NULL }
 };
 

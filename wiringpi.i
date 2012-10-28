@@ -10,6 +10,9 @@ extern void pullUpDnControl   (int pin, int pud) ;
 extern void pinMode           (int pin, int mode) ;
 extern void digitalWrite      (int pin, int value) ;
 extern void pwmWrite          (int pin, int value) ;
+extern void pwmSetMode        (int mode) ;
+extern void pwmSetRange       (unsigned int range) ;
+extern void pwmSetClock       (int divisor) ;
 extern int  digitalRead       (int pin) ;
 extern void shiftOut          (uint8_t dPin, uint8_t cPin, uint8_t order, uint8_t val);
 extern uint8_t shiftIn        (uint8_t dPin, uint8_t cPin, uint8_t order);
@@ -39,6 +42,8 @@ extern unsigned int  readNesJoystick (int joystick) ;
 
 extern int  softPwmCreate (int pin, int value, int range) ;
 extern void softPwmWrite  (int pin, int value) ;
+
+extern int waitForInterrupt(int pin, int mS) ;
 
 %{
 #include "WiringPi/wiringPi/wiringPi.h"

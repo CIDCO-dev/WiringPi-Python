@@ -22,7 +22,7 @@ wiringpi_module = Extension(
 
 setup(
     name = 'wiringpi',
-    version = '1.1.0',
+    version = '1.2.0',
     author = "Philip Howard",
     author_email = "phil@gadgetoid.com",
     url = 'https://github.com/WiringPi/WiringPi-Python/',

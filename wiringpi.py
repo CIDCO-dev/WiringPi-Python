@@ -96,6 +96,18 @@ def pwmWrite(*args):
   return _wiringpi.pwmWrite(*args)
 pwmWrite = _wiringpi.pwmWrite
 
+def pwmSetMode(*args):
+  return _wiringpi.pwmSetMode(*args)
+pwmSetMode = _wiringpi.pwmSetMode
+
+def pwmSetRange(*args):
+  return _wiringpi.pwmSetRange(*args)
+pwmSetRange = _wiringpi.pwmSetRange
+
+def pwmSetClock(*args):
+  return _wiringpi.pwmSetClock(*args)
+pwmSetClock = _wiringpi.pwmSetClock
+
 def digitalRead(*args):
   return _wiringpi.digitalRead(*args)
 digitalRead = _wiringpi.digitalRead
@@ -187,6 +199,10 @@ softPwmCreate = _wiringpi.softPwmCreate
 def softPwmWrite(*args):
   return _wiringpi.softPwmWrite(*args)
 softPwmWrite = _wiringpi.softPwmWrite
+
+def waitForInterrupt(*args):
+  return _wiringpi.waitForInterrupt(*args)
+waitForInterrupt = _wiringpi.waitForInterrupt
 # This file is compatible with both classic and new-style classes.
 
 
@@ -206,6 +222,12 @@ PWM_OUTPUT = 2
 PUD_OFF = 0
 PUD_DOWN = 1
 PUD_UP = 2
+
+class nes(object):
+    def setupNesJoystick(self,*args):
+        return setupNesJoystick(*args)
+    def readNesJoystick(self,*args):
+        return readNesJoystick(*args)
 
 class Serial(object):
     device = '/dev/ttyAMA0'
@@ -276,3 +298,7 @@ class GPIO(object):
         return shiftIn(*args)
     def pullUpDnControl(self,*args):
         return pullUpDnControl(*args)
+    def softPwmCreate(*args):
+        return softPwmCrate(*args)
+    def softPwmWrite(*args):
+        return sofPwmWrite(*args)
