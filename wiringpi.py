@@ -69,141 +69,142 @@ except AttributeError:
 
 
 def wiringPiSetup():
-  return _wiringpi.wiringPiSetup()
+    return _wiringpi.wiringPiSetup()
 wiringPiSetup = _wiringpi.wiringPiSetup
 
 def wiringPiSetupSys():
-  return _wiringpi.wiringPiSetupSys()
+    return _wiringpi.wiringPiSetupSys()
 wiringPiSetupSys = _wiringpi.wiringPiSetupSys
 
 def wiringPiSetupGpio():
-  return _wiringpi.wiringPiSetupGpio()
+    return _wiringpi.wiringPiSetupGpio()
 wiringPiSetupGpio = _wiringpi.wiringPiSetupGpio
 
 def pullUpDnControl(*args):
-  return _wiringpi.pullUpDnControl(*args)
+    return _wiringpi.pullUpDnControl(*args)
 pullUpDnControl = _wiringpi.pullUpDnControl
 
 def pinMode(*args):
-  return _wiringpi.pinMode(*args)
+    return _wiringpi.pinMode(*args)
 pinMode = _wiringpi.pinMode
 
 def digitalWrite(*args):
-  return _wiringpi.digitalWrite(*args)
+    return _wiringpi.digitalWrite(*args)
 digitalWrite = _wiringpi.digitalWrite
 
 def pwmWrite(*args):
-  return _wiringpi.pwmWrite(*args)
+    return _wiringpi.pwmWrite(*args)
 pwmWrite = _wiringpi.pwmWrite
 
 def pwmSetMode(*args):
-  return _wiringpi.pwmSetMode(*args)
+    return _wiringpi.pwmSetMode(*args)
 pwmSetMode = _wiringpi.pwmSetMode
 
 def pwmSetRange(*args):
-  return _wiringpi.pwmSetRange(*args)
+    return _wiringpi.pwmSetRange(*args)
 pwmSetRange = _wiringpi.pwmSetRange
 
 def pwmSetClock(*args):
-  return _wiringpi.pwmSetClock(*args)
+    return _wiringpi.pwmSetClock(*args)
 pwmSetClock = _wiringpi.pwmSetClock
 
 def digitalRead(*args):
-  return _wiringpi.digitalRead(*args)
+    return _wiringpi.digitalRead(*args)
 digitalRead = _wiringpi.digitalRead
 
 def shiftOut(*args):
-  return _wiringpi.shiftOut(*args)
+    return _wiringpi.shiftOut(*args)
 shiftOut = _wiringpi.shiftOut
 
 def shiftIn(*args):
-  return _wiringpi.shiftIn(*args)
+    return _wiringpi.shiftIn(*args)
 shiftIn = _wiringpi.shiftIn
 
 def delay(*args):
-  return _wiringpi.delay(*args)
+    return _wiringpi.delay(*args)
 delay = _wiringpi.delay
 
 def delayMicroseconds(*args):
-  return _wiringpi.delayMicroseconds(*args)
+    return _wiringpi.delayMicroseconds(*args)
 delayMicroseconds = _wiringpi.delayMicroseconds
 
 def millis():
-  return _wiringpi.millis()
+    return _wiringpi.millis()
 millis = _wiringpi.millis
 
 def serialOpen(*args):
-  return _wiringpi.serialOpen(*args)
+    return _wiringpi.serialOpen(*args)
 serialOpen = _wiringpi.serialOpen
 
 def serialClose(*args):
-  return _wiringpi.serialClose(*args)
+    return _wiringpi.serialClose(*args)
 serialClose = _wiringpi.serialClose
 
 def serialPutchar(*args):
-  return _wiringpi.serialPutchar(*args)
+    return _wiringpi.serialPutchar(*args)
 serialPutchar = _wiringpi.serialPutchar
 
 def serialPuts(*args):
-  return _wiringpi.serialPuts(*args)
+    return _wiringpi.serialPuts(*args)
 serialPuts = _wiringpi.serialPuts
 
 def serialDataAvail(*args):
-  return _wiringpi.serialDataAvail(*args)
+    return _wiringpi.serialDataAvail(*args)
 serialDataAvail = _wiringpi.serialDataAvail
 
 def serialGetchar(*args):
-  return _wiringpi.serialGetchar(*args)
+    return _wiringpi.serialGetchar(*args)
 serialGetchar = _wiringpi.serialGetchar
 
 def serialPrintf(*args):
-  return _wiringpi.serialPrintf(*args)
+    return _wiringpi.serialPrintf(*args)
 serialPrintf = _wiringpi.serialPrintf
 
 def wiringPiSPIGetFd(*args):
-  return _wiringpi.wiringPiSPIGetFd(*args)
+    return _wiringpi.wiringPiSPIGetFd(*args)
 wiringPiSPIGetFd = _wiringpi.wiringPiSPIGetFd
 
 def wiringPiSPIDataRW(*args):
-  return _wiringpi.wiringPiSPIDataRW(*args)
+    return _wiringpi.wiringPiSPIDataRW(*args)
 wiringPiSPIDataRW = _wiringpi.wiringPiSPIDataRW
 
 def wiringPiSPISetup(*args):
-  return _wiringpi.wiringPiSPISetup(*args)
+    return _wiringpi.wiringPiSPISetup(*args)
 wiringPiSPISetup = _wiringpi.wiringPiSPISetup
 
 def gertboardAnalogWrite(*args):
-  return _wiringpi.gertboardAnalogWrite(*args)
+    return _wiringpi.gertboardAnalogWrite(*args)
 gertboardAnalogWrite = _wiringpi.gertboardAnalogWrite
 
 def gertboardAnalogRead(*args):
-  return _wiringpi.gertboardAnalogRead(*args)
+    return _wiringpi.gertboardAnalogRead(*args)
 gertboardAnalogRead = _wiringpi.gertboardAnalogRead
 
 def gertboardSPISetup():
-  return _wiringpi.gertboardSPISetup()
+    return _wiringpi.gertboardSPISetup()
 gertboardSPISetup = _wiringpi.gertboardSPISetup
 
 def setupNesJoystick(*args):
-  return _wiringpi.setupNesJoystick(*args)
+    return _wiringpi.setupNesJoystick(*args)
 setupNesJoystick = _wiringpi.setupNesJoystick
 
 def readNesJoystick(*args):
-  return _wiringpi.readNesJoystick(*args)
+    return _wiringpi.readNesJoystick(*args)
 readNesJoystick = _wiringpi.readNesJoystick
 
 def softPwmCreate(*args):
-  return _wiringpi.softPwmCreate(*args)
+    return _wiringpi.softPwmCreate(*args)
 softPwmCreate = _wiringpi.softPwmCreate
 
 def softPwmWrite(*args):
-  return _wiringpi.softPwmWrite(*args)
+    return _wiringpi.softPwmWrite(*args)
 softPwmWrite = _wiringpi.softPwmWrite
 
 def waitForInterrupt(*args):
-  return _wiringpi.waitForInterrupt(*args)
+    return _wiringpi.waitForInterrupt(*args)
 waitForInterrupt = _wiringpi.waitForInterrupt
 # This file is compatible with both classic and new-style classes.
+
 
 
 HIGH = 1
@@ -223,9 +224,10 @@ PUD_OFF = 0
 PUD_DOWN = 1
 PUD_UP = 2
 
-class nes(object):
+class NES(object):
     def setupNesJoystick(self,*args):
         return setupNesJoystick(*args)
+
     def readNesJoystick(self,*args):
         return readNesJoystick(*args)
 
@@ -235,53 +237,64 @@ class Serial(object):
     serial_id = 0
     def printf(self,*args):
         return serialPrintf(self.serial_id,*args)
+
     def dataAvail(self,*args):
         return serialDataAvail(self.serial_id,*args)
+
     def getchar(self,*args):
         return serialGetchar(self.serial_id,*args)
+
     def putchar(self,*args):
         return serialPutchar(self.serial_id,*args)
+
     def puts(self,*args):
         return serialPuts(self.serial_id,*args)
+
     def __init__(self,device,baud):
         self.device = device
         self.baud = baud
         self.serial_id = serialOpen(self.device,self.baud)
+
     def __del__(self):
         serialClose(self.serial_id)
 
-class pin(object):
-	PIN_ID = -1
-	PIN_MODE = OUTPUT
-	def __init__(self,pin_id,pin_mode = OUTPUT):
-		self.PIN_ID = pin_id
-		self.PIN_MODE = pin_mode
-		pinMode(self.PIN_ID, self.PIN_MODE)
-	def read(self):
-		return digitalRead(self.PIN_ID)
-	def write(self,value):
-		return digitalWrite(self.PIN_ID,value)
-	def pwmWrite(self,value):
-		return pwmWrite(self.PIN_ID,value)
-	def mode(self,pin_mode):
-		self.PIN_MODE = pin_mode
-		pinMode(self.PIN_ID,self.PIN_MODE)
+class Pin(object):
+    PIN_ID = -1
+    PIN_MODE = OUTPUT
+    def __init__(self,pin_id,pin_mode=OUTPUT):
+        self.PIN_ID = pin_id
+        self.PIN_MODE = pin_mode
+        pinMode(self.PIN_ID, self.PIN_MODE)
 
-class shift(object):
-	DATA_PIN = 0
-	CLOCK_PIN = 0
-	LATCH_PIN = 0
-	def __init__(self,data_pin,clock_pin,latch_pin):
-		self.DATA_PIN = data_pin
-		self.CLOCK_PIN = clock_pin
-		self.LATCH_PIN = latch_pin
-		self.DATA_PIN.mode(OUTPUT)
-		self.CLOCK_PIN.mode(OUTPUT)
-		self.LATCH_PIN.mode(OUTPUT)
-	def write(self,value,byte_order = MSBFIRST):
-		digitalWrite(self.LATCH_PIN.PIN_ID,LOW)
-		shiftOut(self.DATA_PIN.PIN_ID,self.CLOCK_PIN.PIN_ID,byte_order,value)
-		digitalWrite(self.LATCH_PIN.PIN_ID,HIGH)
+    def read(self):
+        return digitalRead(self.PIN_ID)
+
+    def write(self,value):
+        return digitalWrite(self.PIN_ID,value)
+
+    def pwmWrite(self,value):
+        return pwmWrite(self.PIN_ID,value)
+
+    def mode(self,pin_mode):
+        self.PIN_MODE = pin_mode
+        pinMode(self.PIN_ID,self.PIN_MODE)
+
+class Shift(object):
+    DATA_PIN = 0
+    CLOCK_PIN = 0
+    LATCH_PIN = 0
+    def __init__(self,data_pin,clock_pin,latch_pin):
+        self.DATA_PIN = data_pin
+        self.CLOCK_PIN = clock_pin
+        self.LATCH_PIN = latch_pin
+        self.DATA_PIN.mode(OUTPUT)
+        self.CLOCK_PIN.mode(OUTPUT)
+        self.LATCH_PIN.mode(OUTPUT)
+
+    def write(self,value,byte_order=MSBFIRST):
+        digitalWrite(self.LATCH_PIN.PIN_ID,LOW)
+        shiftOut(self.DATA_PIN.PIN_ID,self.CLOCK_PIN.PIN_ID,byte_order,value)
+        digitalWrite(self.LATCH_PIN.PIN_ID,HIGH)
 
 class GPIO(object):
     HIGH = 1
@@ -301,37 +314,50 @@ class GPIO(object):
     PUD_DOWN = 1
     PUD_UP = 2
     MODE = 0
-    def __init__(self,pinmode=0):
-        self.MODE=pinmode
-        if pinmode==0:
+    def __init__(self,pinmode=WPI_MODE_PINS):
+        self.MODE = pinmode
+        if pinmode == 0:
             wiringPiSetup()
-        elif pinmode==1:
+        elif pinmode == 1:
             wiringPiSetupGpio()
-        elif pinmode==2:
+        elif pinmode == 2:
             wiringPiSetupSys()
+
     def delay(self,*args):
         delay(*args)
+
     def delayMicroseconds(self,*args):
         delayMicroseconds(*args)
+
     def millis(self):
         return millis()
+
     def pinMode(self,*args):
         pinMode(*args)
+
     def digitalWrite(self,*args):
         digitalWrite(*args)
+
     def pwmWrite(self,*args):
         pwmWrite(*args)
+
     def digitalRead(self,*args):
         return digitalRead(*args)
+
     def shiftOut(self,*args):
         shiftOut(*args)
+
     def shiftOutWithDelay(self,*args):
         shiftOutWithDelay(*args)
+
     def shiftIn(self,*args):
         return shiftIn(*args)
+
     def pullUpDnControl(self,*args):
         return pullUpDnControl(*args)
+
     def softPwmCreate(*args):
         return softPwmCrate(*args)
+
     def softPwmWrite(*args):
         return sofPwmWrite(*args)
