@@ -257,7 +257,7 @@ class pin(object):
 		self.PIN_ID = pin_id
 		self.PIN_MODE = pin_mode
 		pinMode(self.PIN_ID, self.PIN_MODE)
-	def read(self):		
+	def read(self):
 		return digitalRead(self.PIN_ID)
 	def write(self,value):
 		return digitalWrite(self.PIN_ID,value)
